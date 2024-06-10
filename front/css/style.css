@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+#container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.btnContainer button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: .2s;
+}
+
+#header button:hover {
+    background-color: #0056b3;
+}
+
+#calendarHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#calendarHeader button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#currentMonth {
+    width: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px;
+    text-align: center;
+}
+
+#calendarContainer {
+    height: 375px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    transition: .4s;
+    
+}
+
+.day:hover {
+    background-color: #fafafa;
+}
+
+.day.empty {
+    background-color: transparent;
+    border: none;
+}
+
+.day.availability {
+    background-color: #e6ffe6;
+}
+
+#newAvailabilityModal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 80%;
+    max-width: 500px;
+}
+
+#newAvailabilityModal h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#newAvailabilityModal label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+#newAvailabilityModal input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#saveAvailabilityButton, #cancelAvailabilityButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+#saveAvailabilityButton {
+    background-color: #28a745;
+    color: white;
+}
+
+#saveAvailabilityButton:hover {
+    background-color: #218838;
+}
+
+#cancelAvailabilityButton {
+    background-color: #dc3545;
+    color: white;
+}
+
+#cancelAvailabilityButton:hover {
+    background-color: #c82333;
+}
+
+#modalOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+}

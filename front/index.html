@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Disponibilidade</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Calendário de Disponibilidade</h1>
+        </div>
+
+        <div id="calendarHeader">
+            <button id="prevMonthButton">←</button>
+            <span id="currentMonth"></span>
+            <button id="nextMonthButton">→</button>
+        </div>
+
+        <div id="calendar"></div>
+
+        <div class="btnContainer">
+            <button id="newAvailabilityButton">Adicionar Disponibilidade</button>
+            <button id="SeeNewAvailabilityButton">Ver Disponibilidade</button>
+        </div>
+
+    </div>
+
+    <div id="newAvailabilityModal">
+        <h2>Adicionar Disponibilidade</h2>
+
+        <label for="availabilityDate">Data:</label>
+        <input type="date" id="dia">
+
+        <label for="availabilityTime">Horário:</label>
+        <input type="time" id="hora">
+
+        <button onclick="createAppointment(event)">Salvar</button>
+        <button id="cancelAvailabilityButton">Cancelar</button>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./banco.js"></script>
+</body>
+
+</html>
